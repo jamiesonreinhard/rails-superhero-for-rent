@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  padding: 3rem 0;
+}
