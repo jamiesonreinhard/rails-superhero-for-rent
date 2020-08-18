@@ -8,6 +8,12 @@
   padding: 0 2rem 0 0;
 }
 
+.heading-option-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
 .location-params {
   font-family: $superhero-title-font;
 }
