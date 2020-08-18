@@ -1,1 +1,37 @@
-<h1>It's working my friends :)</h1>
+<div class="index-heading mb-5">
+  <h4 class="search-params">
+  <%= @superheros.count %> superheroes | August 19 - 20
+  </h4>
+  <h1 class="location-params">
+  Bodyguards in Your Area
+  </h1>
+  <div class="heading-option-buttons">
+    <%= link_to "Price", "#", class: "btn dark-rd-btn mr-1"%>
+    <%= link_to "More filters", "#", class: "btn dark-rd-btn mr-1"%>
+  </div>
+</div>
+
+<div class="row">
+<div class="col-lg-8 border-right">
+  <div class="superhero-grid">
+<% @superheros.each do |superhero| %>
+<div class="index-card">
+  <%= image_tag "batman.png", class: "index-card-image" %>
+  <div class="superhero-details">
+    <div class="superhero-attributes">
+      <h2 class="superhero-name"> <%= superhero.name %> </h2> 
+      <h4 class="superhero-powers"><%= superhero.superpower %> | <%= superhero.city %> </h4>
+    </div>
+    <div>
+      <h3 class="superhero-price">$<%= superhero.hourly_price %>/hr</h3>
+    </div>
+  </div>
+  
+
+</div>
+<% end %>
+</div>
+</div>
+<div class="col-lg-4">
+</div>
+</div>
