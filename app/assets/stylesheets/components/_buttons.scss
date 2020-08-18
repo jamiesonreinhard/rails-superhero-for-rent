@@ -19,3 +19,13 @@
   color: $superhero-background-light;
   border-radius: 0 0 5px 5px;
 }
+
+.dark-blue-btn-outline {
+  border: 1px solid $superhero-blue-dark;
+  color: $superhero-blue-dark;
+  border-radius: 5px;
+  &:hover {
+    background-color: $superhero-blue-dark;
+    color: $superhero-background-light;
+  }
+}
