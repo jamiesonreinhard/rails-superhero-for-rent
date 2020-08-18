@@ -1,2 +1,19 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.superhero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 0 2rem 0 0;
+}
+
+.heading-option-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.location-params {
+  font-family: $superhero-title-font;
+}

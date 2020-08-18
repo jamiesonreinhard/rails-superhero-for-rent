@@ -1,0 +1,21 @@
+.dark-rd-btn {
+  background-color: $superhero-red-dark;
+  color: $superhero-background-light;
+  border-radius: 5px;
+}
+
+.dark-rd-btn-outline {
+  border: 2px solid $superhero-red-dark;
+  color: $superhero-blue-dark;
+  border-radius: 5px;
+  &:hover {
+    background-color: $superhero-blue-dark;
+    color: $superhero-background-light;
+  }
+}
+
+.dark-blue-btn {
+  background-color: $superhero-blue-dark;
+  color: $superhero-background-light;
+  border-radius: 0 0 5px 5px;
+}

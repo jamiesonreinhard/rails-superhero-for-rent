@@ -1,0 +1,39 @@
+.index-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #8d99ae;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px $superhero-gray;
+}
+
+.index-card-image {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+// how do I auto size this image to fit the card?
+
+.superhero-name {
+  font-size: 20px;
+  font-family: $superhero-title-font;
+}
+
+.superhero-powers {
+  font-size: 14px;
+}
+
+.superhero-price {
+  font-size: 18px;
+}
+
+.superhero-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.superhero-attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
