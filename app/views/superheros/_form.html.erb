@@ -1,0 +1,19 @@
+ <%= simple_form_for(@superhero) do |f| %>
+    <div class="form-group">
+      <div class="field">
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :city, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :superpower, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :hourly_price, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.button :submit, class: "btn btn-info" %>
+      </div>
+    </div>
+<% end %>
