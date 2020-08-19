@@ -1,32 +1,40 @@
 .superhero-header-nav {
   display: flex;
   justify-content: space-between;
-
 }
 
+.superhero-booking-name {
+  font-family: $superhero-title-font;
+  font-size: 3rem;
+  color: $superhero-blue-dark;
+}
 
 .form-control {
   border-radius: 10px;
 }
+
+.about-content-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: $superhero-body-font;
+
+}
+
 .book-sidebar{
   color:white;
   background-color: #2b2d42;
   position: fixed !important;
   z-index: 1 !important;
-
 }
-
-.about-content-header {
-    float:left;
-    width: 65%;
-    text-align: left;
-
-}
-
 
 .share-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .favorite-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  cursor: pointer;
 }
+
+
