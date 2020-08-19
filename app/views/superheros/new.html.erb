@@ -1,23 +1,5 @@
 <div class="container">
   <h2>Create a new superhero!</h2>
-  <%= simple_form_for(@superhero) do |f| %>
-    <div class="form-group">
-      <div class="field">
-        <%= f.input :name, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.input :city, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.input :superpower, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.input :hourly_price, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.button :submit, class: "btn btn-info" %>
-      </div>
-    </div>
-<% end %>
+  <%= render "form" %>
   <%= link_to "Go back to superheros", superheros_path %>
 </div>

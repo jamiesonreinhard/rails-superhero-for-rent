@@ -18,7 +18,7 @@
 <div class="container show-container">
   <div class="row">
     <div class="col-6 mt-2">
-      <img src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fblogs-images.forbes.com%2Fjvchamary%2Ffiles%2F2016%2F03%2Fman_of_steel-1200x800.jpg" style="width:100%">
+       <%= cl_image_tag @superhero.img_url.key, height: 300, width: 400, crop: :fill, class: "super-hero-picture" %>
        <div class="about-content-header my-3">
          <div class="content-header"><h3 style="font-family: 'Lato, sans-serif';">Super Bodyguard by <%= @superhero.name %></h3></div>
          <img class="avatar" alt="avatar"src="https://i.pinimg.com/originals/59/a1/c7/59a1c7e4cb84ca48d265e63295fd8eb6.jpg" />
