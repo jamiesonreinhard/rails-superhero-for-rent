@@ -45,7 +45,7 @@ puts "Create superheroes"
     city: cities.sample, address: addresses.sample, img_url: superheros_data["image"]["url"],
     superpower: Faker::Superhero.power, hourly_price: rand(500...2000), user: User.all.sample)
     file = URI.open(superheros_data["image"]["url"])
-    superhero.photo.attach(io: file, filename: "#{superheros_data['name']}.jpeg", content_type: 'image/jpeg')
+    superhero.img_url.attach(io: file, filename: "#{superheros_data['name']}.jpeg", content_type: 'image/jpeg')
     superhero.save
 end
 
