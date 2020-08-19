@@ -13,6 +13,14 @@
   border-radius: 10px;
 }
 
+.about-content-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: $superhero-body-font;
+
+}
+
 .book-sidebar{
   color:white;
   background-color: #2b2d42;
@@ -29,15 +37,7 @@
   cursor: pointer;
 }
 
-.your-hero-subtitle {
-  font-family: $superhero-body-font;
-}
 
-.hero-attributes {
-  list-style: none;
-  padding: 0;
-}
-
-.hero-attribute-item {
-  font-family: $superhero-body-font;
+.super-hero-picture {
+  width: 100%;
 }
