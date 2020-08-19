@@ -24,7 +24,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'mapbox-gl-rails'
 gem 'geocoder'
-
+#Cloudinary gem for security
+gem 'dotenv-rails', groups: [:development, :test]
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
