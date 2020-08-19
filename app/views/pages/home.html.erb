@@ -3,10 +3,10 @@
 <div class="site-header">
   <h1 class="site-title">MYSUPER</h1>
   <h3 class="site-subtitle mb-5">Stay safe out there... with a <span>SUPER</span> bodyguard</h3>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2 home-search" type="search" placeholder="Enter City" aria-label="Search">
+  <form id="search-form" class="form-inline" action="/superheros">
+    <input id="search-query" class="form-control mr-sm-2 home-search" type="search" placeholder="Enter City" aria-label="Search">
     <%# create a dropdown with list of cities available for above input %>
-    <input class="form-control mr-sm-2 home-search" type="search" placeholder="Enter Date" aria-label="Search">
+    <%# <input class="form-control mr-sm-2 home-search" type="search" placeholder="Enter Date" aria-label="Search"> %>
     <%# create a calendar where you can select one date for above input %>
     <button class="btn dark-blue-btn-outline mr-2" type="submit">Find</button>
   </form>
