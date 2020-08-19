@@ -17,9 +17,9 @@
 }
 
 .about-content-header {
-    float:left;
-    width: 65%;
-    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
 }
 
