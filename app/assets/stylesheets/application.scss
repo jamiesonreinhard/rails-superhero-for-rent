@@ -11,6 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/carousel";
+@import "pages/show";
 
 body {
   font-family: 'Lato', sans-serif;
@@ -22,12 +24,8 @@ body {
 
 }
 
-.container {
-  padding: 3rem 0;
-}
-
-.field {
-  padding: 10px;
-  position: relative;
 
 }
+
+
+
