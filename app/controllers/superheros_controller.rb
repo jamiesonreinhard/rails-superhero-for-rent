@@ -53,7 +53,7 @@ def set_superhero
 end
 
 def superhero_params
-  params.require(:superhero).permit(:name, :city, :superpower, :hourly_price)
+  params.require(:superhero).permit(:name, :city, :superpower, :hourly_price, :img_url)
 end
 
 end
