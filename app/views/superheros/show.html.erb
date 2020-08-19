@@ -1,10 +1,10 @@
 <div class="container show-container">
   <div class="superhero-show-header-content px-4 py-1">
-  <h1 style="font-family:'Russo One, sans-serif'"><%= @superhero.name %></h1>
+  <h1 class="superhero-booking-name"><%= @superhero.name %></h1>
   <div class="flexbox superhero-header-nav d-flex justify-content-between">
     <div class="flexbox d-flex">
       <div><i class="far fa-star"> 4.8</i></div>
-      <div class="hero-city ml-3"><span><%= @superhero.city %>, United States</span></div>
+      <div class="hero-city ml-3"><span><%= @superhero.city %></span></div>
     </div>
     <div class="save-share-icons d-flex flex-row">
      <div class="share-icon mr-2"> <i class="far fa-share-square"> Share</i></div>
@@ -76,15 +76,15 @@
 
 <div>
   <div class="container about-content-header ml-1 mt-4 mb-2 py-1 d-flex">
-    <div class="content-header"><h3 style="font-family: 'Lato, sans-serif';">Super Bodyguard by <%= @superhero.name %></h3></div>
+    <div class="content-header"><h3 class="your-hero-subtitle">Your Super Bodyguard: <strong><%= @superhero.name %></strong></h3></div>
     <img class="avatar" alt="avatar"src="https://i.pinimg.com/originals/59/a1/c7/59a1c7e4cb84ca48d265e63295fd8eb6.jpg" />
   </div>
   <div class="container about-content ml-1 my-2 py-2" style="font-family: 'Lato, sans-serif'; width:600px;">
-    <span>Superman can move, react, and think at superhuman speeds greater than that of sound. He can defy gravity and fly through force of will.
-      Superman's irradiated cells generate a force field that extends for a fraction of an inch around his body, rendering any material within the field nearly indestructible,
-      such as his skin tight costume. (Because his cape extends beyond the field, it is easily damaged.).
-      Superman can move, react, and think at superhuman speeds greater than that of sound. He can defy gravity and fly through force of will. Superman's irradiated cells generate a force field that extends for a fraction of an inch around his body, rendering any material within the field nearly indestructible, such as his skin tight costume. (Because his cape extends beyond the field, it is easily damaged.)
-    </span>
+    <ul class="hero-attributes">
+    <li class="hero-attribute-item"><strong>Superpower:</strong> <%=  @superhero.superpower %></li>
+    <li class="hero-attribute-item"><strong>Agent Address:</strong> <%=  @superhero.address %></li>
+    </ul>
+  <%= link_to "Back to Superheroes", superheros_path, class: "btn btn-lg dark-blue-btn-outline" %>
   </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="index-heading mb-5">
   <h4 class="search-params">
-  <%= @superheros.count %> superheroes | August 19 - 20
+  <%= @superheros.count %> superheroes | August 19
   </h4>
   <h1 class="location-params">
   Superguards in Your Area
@@ -12,7 +12,6 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Enter Date" aria-label="Search">
     <%# create a calendar where you can select one date for above input %>
     <%= link_to "Price", "#", class: "btn dark-rd-btn mr-2"%>
-    <%= link_to "More filters", "#", class: "btn dark-rd-btn mr-2"%>
     <button class="btn dark-rd-btn-outline mr-2" type="submit">Find</button>
   </form>
     
@@ -35,7 +34,7 @@
       <h3 class="superhero-price">$<%= superhero.hourly_price %>/hr</h3>
     </div>
   </div>
-  <%= link_to "Book #{superhero.name}", "#", class: "btn dark-blue-btn btn-block"%>
+  <%= link_to "Book #{superhero.name}", superhero_path(superhero), class: "btn dark-blue-btn btn-block"%>
 </div>
 <% end %>
 </div>
