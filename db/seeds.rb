@@ -1,12 +1,24 @@
 require 'open-uri'
 require 'json'
+require 'faker'
 
-superhero_data = JSON.parse(open("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json").read)
+# puts "Destroy superheros"
+# Superhero.destroy_all if Rails.env.development?
 
-puts superhero_data[0]["name"]
 
-100.times do
-  random_index = rand(1..700)
-  superindex = superhero_data[random_index]
-  Superhero.create!(name: superindex["name"], city: superindex["work"]["base"] != "-" ? superindex["work"]["base"] : (['New York', 'Los Angeles', 'Houston', 'Chicago', 'Seattle']).sample, superpower: "Butt Kicking", hourly_price: rand(50..1000))
+puts "Create superheroes"
+
+1..100.times do |index|
+
+  url = "https://superheroapi.com/api/10101309158912354/#{index+1}"
+  superheros_data = JSON.parse(open(url).read)
+  supehero = Superhero.new(name: superheros_data['name'], image_url: superheros_data["image"]["url"],
+    city: Faker::Address.city,
+    superpower: Faker::Superhero.power, hourly_price: rand(500...2000), user: User.all.sample)
+    file = URI.open(superheros_data["image"]["url"])
+    supehero.photo.attach(io: file, filename: "#{supeheros_data['name']}.jpeg", content_type: 'image/jpeg')
+    superhero.save
 end
+
+
+
