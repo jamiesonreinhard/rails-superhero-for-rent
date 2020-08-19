@@ -1,68 +1,65 @@
-
-  <div class="flexbox superhero-header-nav d-flex justify-content-between">
-    <div class="flexbox d-flex">
-      <div><i class="far fa-star"> 4.8</i></div>
-      <div class="hero-city ml-3"><span><%= @superhero.city %></span></div>
-    </div>
-    <div class="save-share-icons d-flex flex-row">
-     <div class="share-icon mr-2"> <i class="far fa-share-square"> Share</i></div>
-      <div class="favorite-icon"><i class="far fa-heart"> Save</i></div>
-    </div>
-  </div>
-</div>
-    </div>
-
-
-<div class="container show-container">
-  <div class="row">
-    <div class="col-6">
-    <img src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fblogs-images.forbes.com%2Fjvchamary%2Ffiles%2F2016%2F03%2Fman_of_steel-1200x800.jpg" style="width:100%">
-    <div class="about-content-header">
-    <div class="content-header"><h3 style="font-family: 'Lato, sans-serif';">Super Bodyguard by <%= @superhero.name %></h3></div>
-    <img class="avatar" alt="avatar"src="https://i.pinimg.com/originals/59/a1/c7/59a1c7e4cb84ca48d265e63295fd8eb6.jpg" />
-  </div>
-  <div class="about-content my-2 py-2" style="font-family: 'Lato, sans-serif';">
-    <span>Superman can move, react, and think at superhuman speeds greater than that of sound. He can defy gravity and fly through force of will.
-      Superman's irradiated cells generate a force field that extends for a fraction of an inch around his body, rendering any material within the field nearly indestructible,
-      such as his skin tight costume. (Because his cape extends beyond the field, it is easily damaged.).
-      Superman can move, react, and think at superhuman speeds greater than that of sound. He can defy gravity and fly through force of will. Superman's irradiated cells generate a force field that extends for a fraction of an inch around his body, rendering any material within the field nearly indestructible, such as his skin tight costume. (Because his cape extends beyond the field, it is easily damaged.)
-    </span>
-  </div>
-  </div>
-    <div class="col-6">
-      <div class="container book-form-container" style="width: 480px";>
-  <div class="book-sidebar mt-4 py-4 ml-2" style="width: 460px; border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;">
-     <div id="book-sidebar-date">
-       <div class="book-price-row">
-        <div class="book-price-rating d-flex justify-content-between mt-0">
-          <span><strong>$<%= @superhero.hourly_price %></strong>/hour</span>
-           <i class="far fa-star">4.8</i>
-        </div>
+<div class="container">
+  <div class="superhero-show-header-content px-4 py-1">
+    <h1 style="font-family:'Russo One, sans-serif'"><%= @superhero.name %></h1>
+     <div class="flexbox superhero-header-nav d-flex justify-content-between">
+       <div class="flexbox d-flex">
+         <div><i class="far fa-star"> 4.8</i></div>
+         <div class="hero-city ml-3"><span><%= @superhero.city %>, United States</span></div>
        </div>
-       <div>
-        <form>
-          <div class="form-group" style="font-family:'Work Sans, Helvetica, sans-serif'">
-            <label for="exampleInputEmail1"></label>
-            <input type="date" class="form-control" id="exampleInputDate" aria-describedby="dateHelp" placeholder="Date">
-          </div>
-          <div class="form-group" style="font-family:'Work Sans, Helvetica, sans-serif'">
-            <label for="exampleInputEvent"></label>
-            <input type="text" class="form-control" id="exampleInputEvent" placeholder="Event">
-          </div>
-          <div class="form-group" style="font-family:'Work Sans, Helvetica, sans-serif'">
-            <label for="exampleInputLocation"></label>
-            <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location">
-          </div>
-          <button type="book" class="btn dark-rd-btn w-100 mt-2">Book</button>
-         </form>
+       <div class="save-share-icons d-flex flex-row">
+         <div class="share-icon mr-2"> <i class="far fa-share-square"> Share</i></div>
+         <div class="favorite-icon"><i class="far fa-heart"> Save</i></div>
        </div>
      </div>
   </div>
 </div>
 
+
+<div class="container show-container">
+  <div class="row">
+    <div class="col-6 mt-2">
+      <img src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fblogs-images.forbes.com%2Fjvchamary%2Ffiles%2F2016%2F03%2Fman_of_steel-1200x800.jpg" style="width:100%">
+       <div class="about-content-header my-3">
+         <div class="content-header"><h3 style="font-family: 'Lato, sans-serif';">Super Bodyguard by <%= @superhero.name %></h3></div>
+         <img class="avatar" alt="avatar"src="https://i.pinimg.com/originals/59/a1/c7/59a1c7e4cb84ca48d265e63295fd8eb6.jpg" />
+       </div>
+      <div class="about-content my-1 py-1" style="font-family: 'Lato, sans-serif';">
+        <span>
+          <%= @superhero.superpower %>
+          <%= @superhero.address %>
+        </span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="container book-form-container mt-0" style="width: 480px";>
+        <div class="book-sidebar mt-4 py-4 ml-2" style="width: 460px; border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;">
+           <div id="book-sidebar-date">
+             <div class="book-price-row">
+              <div class="book-price-rating d-flex justify-content-between mt-0">
+                <span><strong>$<%= @superhero.hourly_price %></strong>/hour</span>
+                <i class="far fa-star">4.8</i>
+              </div>
+             </div>
+             <div>
+              <form>
+                <div class="form-group" style="font-family:'Work Sans, Helvetica, sans-serif'">
+                  <label for="exampleInputEmail1"></label>
+                  <input type="date" class="form-control" id="exampleInputDate" aria-describedby="dateHelp" placeholder="Date">
+                </div>
+                <div class="form-group" style="font-family:'Work Sans, Helvetica, sans-serif'">
+                  <label for="exampleInputEvent"></label>
+                  <input type="text" class="form-control" id="exampleInputEvent" placeholder="Event">
+                </div>
+                <div class="form-group" style="font-family:'Work Sans, Helvetica, sans-serif'">
+                  <label for="exampleInputLocation"></label>
+                  <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location">
+                </div>
+                <button type="book" class="btn dark-rd-btn w-100 mt-2">Book</button>
+               </form>
+             </div>
+           </div>
+        </div>
+    </div>
   </div>
 <div>
-
-
-
 
