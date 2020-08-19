@@ -2,7 +2,13 @@ class SuperherosController < ApplicationController
   before_action :set_superhero, only: [:show, :edit, :update, :destroy] 
 #   Create the index action
 def index
-  @superheros = Superhero.all
+  @superheros = Superhero.geocoded
+  @markers = @superheros.map do |superhero|
+    {
+      lat: superhero.latitude,
+      lng: superhero.longitude
+    }
+  end
 end
 # 2.Create the show action
 def show  

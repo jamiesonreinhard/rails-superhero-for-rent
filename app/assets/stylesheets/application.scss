@@ -14,6 +14,9 @@
 @import "components/carousel";
 @import "pages/show";
 
+// Mapbox
+@import 'mapbox-gl/dist/mapbox-gl';
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: $superhero-background-light;
