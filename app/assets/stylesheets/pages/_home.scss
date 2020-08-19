@@ -1,1 +1,33 @@
 // Specific CSS for your home-page
+
+.site-header {
+  position: absolute;
+  top: 18rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.site-title {
+  font-size: 7rem;
+  font-family: $superhero-title-font;
+  color: $superhero-blue-dark;
+}
+
+.site-subtitle {
+  
+}
+
+.site-subtitle span {
+  font-weight: bolder;
+  color: $superhero-red-dark;
+  text-decoration: underline;
+}
+
+.home-search {
+  border: 2px solid $superhero-blue-dark;
+  border-radius: 5px;
+}

@@ -14,7 +14,8 @@ end
 # 4.Create the create action
 def create
   @superhero = Superhero.new(superhero_params)
-  if @superhero.save
+  @superhero.user = current_user
+  if @superhero.save!
     redirect_to superhero_path(@superhero)
   else
     render :new
