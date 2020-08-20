@@ -9,6 +9,18 @@
   color: $superhero-blue-dark;
 }
 
+.superhero-details-card {
+  display: flex;
+  justify-content: left;
+}
+
+.super-hero-picture {
+  max-height: 400px;
+  box-shadow: 5px 5px 10px $superhero-gray;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
 .form-control {
   border-radius: 10px;
 }
@@ -18,14 +30,30 @@
   display: flex;
   justify-content: space-between;
   font-family: $superhero-body-font;
-
 }
 
-.book-sidebar{
+.checkout-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.save-share-icons {
+  display: flex;
+  justify-content: right;
+}
+
+.booking-card{
   color:white;
-  background-color: #2b2d42;
-  position: fixed !important;
-  z-index: 1 !important;
+  background-color: $superhero-blue-dark;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px $superhero-gray;
+}
+
+.booking-details {
+  display: flex;
+  justify-content: space-between;
 }
 
 .share-icon:hover {
@@ -38,6 +66,3 @@
 }
 
 
-.super-hero-picture {
-  width: 100%;
-}

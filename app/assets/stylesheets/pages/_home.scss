@@ -2,7 +2,7 @@
 
 .site-header {
   position: absolute;
-  top: 18rem;
+  top: 23rem;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -15,10 +15,6 @@
   font-size: 7rem;
   font-family: $superhero-title-font;
   color: $superhero-blue-dark;
-}
-
-.site-subtitle {
-  
 }
 
 .site-subtitle span {
