@@ -48,7 +48,7 @@
       <div class="booking-card mb-3">
         <div class="booking-details">
           <span><strong>$<%= @superhero.hourly_price %></strong>/hour</span>
-          <i class="far fa-star"><%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : 5.00 %></i>
+          <i class="far fa-star"><%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : N/A %></i>
         </div>
         <form>
           <div class="form-group" style="font-family:'Work Sans, Helvetica, sans-serif'">
@@ -66,6 +66,6 @@
           <button type="book" class="btn dark-rd-btn w-100 mt-2">Book</button>
         </form>
       </div>
-      
+    </div>
   </div>
 </div>
