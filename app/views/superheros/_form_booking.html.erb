@@ -1,0 +1,19 @@
+<%= simple_form_for(@booking) do |f| %>
+    <div class="form-group">
+      <div class="field">
+        <%= f.input :date, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.input :number_of_hours, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.input :event, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.input :location, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.button :submit, class: "btn btn-info" %>
+      </div>
+    </div>
+<% end %>
