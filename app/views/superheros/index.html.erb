@@ -23,16 +23,20 @@
   <div class="superhero-grid">
 <% @superheros.each do |superhero| %>
 <div class="index-card">
-  <%= cl_image_tag superhero.img_url.key, class: "index-card-image" %>
+  <div>
+    <div class="index-card-image-box">
+      <%= cl_image_tag superhero.img_url.key, class: "index-card-image" %>
+      <div class="price-chip">
+        <h3 class="superhero-price">$<%= superhero.hourly_price %>/hr</h3>
+      </div>
+    </div>
   <div class="superhero-details">
     <div class="superhero-attributes">
       <h2 class="superhero-name"> <%= superhero.name %> </h2> 
       <h4 class="superhero-powers"><em><strong>Power: </strong> <%= superhero.superpower %></em></h4>
       <h4 class="superhero-powers"><em><strong>City: </strong> <%= superhero.city %></em></h4>
     </div>
-    <div>
-      <h3 class="superhero-price">$<%= superhero.hourly_price %>/hr</h3>
-    </div>
+  </div>
   </div>
   <%= link_to "Book #{superhero.name}", superhero_path(superhero), class: "btn dark-blue-btn btn-block"%>
 </div>
