@@ -19,18 +19,20 @@ john = User.create!(first_name: "John", last_name: 'Smith', email: "johnsmith@gm
 
 puts "Create superheros"
 
-1..50.times do
+1..25.times do
 
-  random_heros = rand(1..700)
+  random_heros = rand(1..300)
   url = "https://superheroapi.com/api/10101309158912354/#{random_heros}"
   superheros_data = JSON.parse(open(url).read)
   superhero = Superhero.new(name: superheros_data['name'],
     city: cities.sample,
     superpower: Faker::Superhero.power, hourly_price: rand(500...2000), user: User.all.sample)
-    if (superheros_data["image"]["url"])
+    if (superheros_data["image"]["url"] == '')
       file = URI.open(superheros_data["image"]["url"])
 
-      superhero.img_url.attach(io: file, filename: "#{superheros_data['name']}.jpg", content_type: 'image/jpg')
+      # superhero.img_url.attach(io: file, filename: "#{superheros_data['name']}.jpg", content_type: 'image/jpg')
+    # else
+    #   url("")
     end
     superhero.save
 
