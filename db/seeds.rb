@@ -19,9 +19,10 @@ john = User.create!(first_name: "John", last_name: 'Smith', email: "johnsmith@gm
 
 puts "Create superheros"
 
-1..25.times do |index|
+1..50.times do
 
-  url = "https://superheroapi.com/api/10101309158912354/#{index+1}"
+  random_heros = rand(1..700)
+  url = "https://superheroapi.com/api/10101309158912354/#{random_heros}"
   superheros_data = JSON.parse(open(url).read)
   superhero = Superhero.new(name: superheros_data['name'],
     city: cities.sample,
