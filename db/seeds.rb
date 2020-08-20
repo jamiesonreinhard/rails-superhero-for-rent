@@ -13,7 +13,7 @@ cities = ['New York City', 'Paris', 'Chicago', 'Mexico City', 'Denver', 'Montrea
           'London', 'Los Angeles', 'Toronto', 'Portland', 'Milan', 'Barcelona', 'Sydney']
 
 
-valeria = User.create!(first_name: "Valeria", last_name: 'Ramey', email: "valeriaramey@gmail.com", password: "valval")
+valeria = User.create!(first_name: "Valeria", last_name: 'Ramey', email: "valeriaramey@gmail.com", password: "123456")
 iben = User.create!(first_name: "Iben", last_name: 'Lewagon', email: "iben@gmail.com", password: "123456")
 john = User.create!(first_name: "John", last_name: 'Smith', email: "johnsmith@gmail.com", password: "123456")
 
@@ -31,7 +31,6 @@ puts "Create superheros"
 
       superhero.img_url.attach(io: file, filename: "#{superheros_data['name']}.jpg", content_type: 'image/jpg')
     end
-    puts superhero
     superhero.save
 
 end
