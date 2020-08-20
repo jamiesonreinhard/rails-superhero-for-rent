@@ -14,10 +14,16 @@
   }
 }
 
-.dark-blue-btn {
+.dark-blue-btn-card {
   background-color: $superhero-blue-dark;
   color: $superhero-background-light;
   border-radius: 0 0 5px 5px;
+}
+
+.dark-blue-btn {
+  background-color: $superhero-blue-dark;
+  color: $superhero-background-light;
+  border-radius: 5px;
 }
 
 .dark-blue-btn-outline {

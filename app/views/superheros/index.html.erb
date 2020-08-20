@@ -5,17 +5,16 @@
   <h1 class="location-params">
   Superguards in Your Area
   </h1>
-  <div class="heading-option-buttons">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Enter City" aria-label="Search">
-    <%# create a dropdown with list of cities available for above input %>
-    <input class="form-control mr-sm-2" type="search" placeholder="Enter Date" aria-label="Search">
-    <%# create a calendar where you can select one date for above input %>
-    <%= link_to "Price", "#", class: "btn dark-rd-btn mr-2"%>
-    <button class="btn dark-rd-btn-outline mr-2" type="submit">Find</button>
-  </form>
-    
-  </div>
+  <div>
+    <%= form_tag superheros_path, class: "form-inline", method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control mr-1",
+      placeholder: "Find Your Super"
+    %>
+    <%= submit_tag "Search", class: "btn dark-blue-btn-outline mr-2"  %>
+    <% end %>
+   </div>
 </div>
 
 <div class="row">
@@ -43,7 +42,7 @@
     </div>
   </div>
   </div>
-  <%= link_to "Book #{superhero.name}", superhero_path(superhero), class: "btn dark-blue-btn btn-block"%>
+  <%= link_to "Book #{superhero.name}", superhero_path(superhero), class: "btn dark-blue-btn-card btn-block"%>
 </div>
 <% end %>
 </div>

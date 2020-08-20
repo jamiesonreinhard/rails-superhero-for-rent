@@ -1,0 +1,5 @@
+<div class="container">
+  <h2>Create a new review for <%= @superhero.name %>!</h2>
+  <%= render "form" %>
+  <%= link_to "Go back to #{@superhero.name}", superhero_path(@superhero), class: "btn dark-rd-btn" %>
+</div>

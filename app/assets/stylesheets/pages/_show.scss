@@ -67,4 +67,18 @@
   cursor: pointer;
 }
 
+.reviews-header {
+  display: flex;
+  justify-content: left;
+}
 
+.review-card {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px $superhero-gray;;
+  width: 90%;
+}
+
+.review-card p {
+  margin: 0;
+}
