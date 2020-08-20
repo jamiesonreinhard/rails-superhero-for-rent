@@ -4,7 +4,7 @@
         <%= f.input :rating, as: :radio_buttons, collection: [ 1, 2, 3, 4, 5], wrapper: :vertical_collection_inline, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.input :description, input_html: { maxlength: 100 }, class: "form-control" %>
+        <%= f.input :description, input_html: { maxlength: 150 }, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.button :submit, class: "btn dark-blue-btn-outline" %>
