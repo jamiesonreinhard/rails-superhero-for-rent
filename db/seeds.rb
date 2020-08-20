@@ -1,7 +1,6 @@
 require 'open-uri'
 require 'json'
 require 'faker'
-require 'pry'
 
 puts "Destroy superheros"
 User.destroy_all

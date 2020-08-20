@@ -6,16 +6,29 @@
 
 <div class="row">
   <div class="col-lg-7 border-right">
-    <div class="superhero-details-card">
+    <div class="superhero-details-card mb-5">
       <%= cl_image_tag @superhero.img_url.key, crop: :thumb, gravity: :face, class: "super-hero-picture mr-4" %>
       <div class="superhero-info">
         <h1 class="super-text"><%= @superhero.name %></h1>
         <div class="flexbox d-flex mb-3">
           <div><i class="far fa-star"> 4.8</i></div>
           <div class="hero-city ml-3"><span><%= @superhero.city %></span></div>
-
         </div>
         <h4 class="">Superpower: <%= @superhero.superpower %></h2>
+      </div>
+    </div>
+    <div class="reviews-show">
+      <div class="reviews-header mb-5">
+        <h1 class="mr-3">Reviews</h1>
+        <%= link_to "Create review", new_superhero_review_path(@superhero), class: "btn dark-blue-btn-outline btn-lg" %>
+      </div>
+      <div class="reviews-display">
+        <% @superhero.reviews.each do |review| %>
+          <div class="review-card mb-3">
+            <h4 mb-2><%= review.rating %>/5</h4>
+            <p><%= review.description %></p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -33,9 +46,14 @@
             <div class="share-icon mr-2"> <i class="far fa-share-square"> Share</i></div>
             <div class="favorite-icon"><i class="far fa-heart"> Save</i></div>
           </div>
+        </div>
       </div>
     </div>
   </div>
+
 </div>
 
+
+
+</div>
 
