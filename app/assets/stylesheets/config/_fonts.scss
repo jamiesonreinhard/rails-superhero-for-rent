@@ -17,3 +17,13 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 
 $superhero-title-font: 'Russo One', 'sans-serif';
 $superhero-body-font: 'Lato', 'sans-serif';
+
+.super-text {
+  font-family: $superhero-title-font;
+}
+
+.huge-name {
+  font-family: $superhero-title-font;
+  font-size: 10rem;
+  opacity: 0.5;
+}
