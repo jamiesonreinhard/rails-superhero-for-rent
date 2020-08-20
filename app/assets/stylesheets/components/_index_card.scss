@@ -1,15 +1,37 @@
 .index-card {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   background-color: #8d99ae;
   border-radius: 5px;
   box-shadow: 5px 5px 10px $superhero-gray;
 }
 
+.index-card-image-box {
+  position: relative;
+}
+
+.price-chip {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: $superhero-red-dark;
+  border: 1px solid $superhero-background-light;
+  padding: 2px;
+  color: $superhero-background-light;
+  border-radius: 5px;
+}
+
+.superhero-price {
+  font-size: 16px;
+  margin: 0;
+}
+
 .index-card-image {
   border-radius: 5px 5px 0 0;
   width: 100%;
-  max-height: 250px;
+  height: 225px;
+  object-fit: cover;
 }
 // how do I auto size this image to fit the card?
 
@@ -20,10 +42,6 @@
 
 .superhero-powers {
   font-size: 14px;
-}
-
-.superhero-price {
-  font-size: 18px;
 }
 
 .superhero-details {
