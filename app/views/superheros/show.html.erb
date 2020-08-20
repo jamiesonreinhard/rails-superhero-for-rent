@@ -24,7 +24,10 @@
          <img class="avatar" alt="avatar"src="https://i.pinimg.com/originals/59/a1/c7/59a1c7e4cb84ca48d265e63295fd8eb6.jpg" />
        </div>
       <div class="about-content my-1 py-1" style="font-family: 'Lato, sans-serif';">
-        <span>Superpower: <%= @superhero.superpower %></span>
+        <span>
+          <%= @superhero.superpower %>
+          <%= @superhero.city %>
+        </span>
       </div>
     </div>
     <div class="col-6">
