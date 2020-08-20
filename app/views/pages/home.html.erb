@@ -9,11 +9,11 @@
     <%# create a calendar where you can select one date for above input %
    <%= form_tag superheros_path, method: :get do %>
   <div>
-    <%= form_tag superheros_path, method: :get do %>
+    <%= form_tag superheros_path, class: "form-inline", method: :get do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
-      placeholder: "Find Your Super"
+      class: "form-control mr-1",
+      placeholder: "City or Superhero Name"
     %>
     <%= submit_tag "Search", class: "btn dark-blue-btn-outline mr-2"  %>
     <% end %>
