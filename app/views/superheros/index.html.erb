@@ -25,7 +25,12 @@
 <div class="index-card">
   <div>
     <div class="index-card-image-box">
+    <%# add a conditional to check if image exists below, else display placeholder %>
+    <% if superhero.img_url.attached? %>
       <%= cl_image_tag superhero.img_url.key, class: "index-card-image" %>
+      <% else %>
+      <%= image_tag("questionmark.jpg") %>
+      <% end %>
       <div class="price-chip">
         <h3 class="superhero-price">$<%= superhero.hourly_price %>/hr</h3>
       </div>
