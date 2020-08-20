@@ -2,7 +2,7 @@ class Superhero < ApplicationRecord
   belongs_to :user
   has_one_attached :img_url
 
-  has_many :bookings, through: :users
+  has_many :bookings
 
   has_many :reviews
 

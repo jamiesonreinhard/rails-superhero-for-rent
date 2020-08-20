@@ -18,6 +18,7 @@ def index
 end
 # 2.Create the show action
 def show
+  @booking = Booking.new
 end
 # 3.Create the new action
 def new
