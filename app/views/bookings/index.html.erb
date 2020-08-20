@@ -1,19 +1,18 @@
-<h3> Your booking are  
-   <% current_user.bookings.each do |booking|%>
-   
-<div class="superhero-details-card">
-      <%= cl_image_tag booking.superhero.img_url.key, crop: :thumb, gravity: :face, class: "super-hero-picture mr-4" %>
-      <div class="superhero-info">
-        <h1 class="super-text"><%= booking.superhero.name %></h1>
-        <div class="flexbox d-flex mb-3">
-          <div><i class="far fa-star"> 4.8</i></div>
-          <div class="hero-city ml-3"><span><%= booking.superhero.city %></span></div>
+<h3> All My Bookings</h3>
+   <% current_user.bookings.each do |booking| %>
 
-        </div>
-        <h4 class="">Superpower: <%= booking.superhero.superpower %></h2>
+      <div class="booking-superhero-details-card">
+          <%= cl_image_tag booking.superhero.img_url.key, crop: :thumb, gravity: :face, class: "super-hero-booking-picture mr-4" %>
+            <div class="superhero-info">
+              <h1 class="super-text"><%= booking.superhero.name %></h1>
+              <div class="flexbox d-flex mb-3">
+                <div><i class="far fa-star"> 4.8</i></div>
+                <div class="hero-city ml-3"><span><%= booking.superhero.city %></span></div>
+             </div>
+           </div>
+              <h4 class="">Superpower: <%= booking.superhero.superpower %></h4>
+         <%= link_to 'Edit', edit_superhero_booking_path(booking.superhero, booking) %>
+         <%= link_to 'Edit', edit_superhero_booking_path(booking.superhero, booking) %>
       </div>
-    </div>
+   <%end%>
 
-   
-   <%end%>   
-</h3>
