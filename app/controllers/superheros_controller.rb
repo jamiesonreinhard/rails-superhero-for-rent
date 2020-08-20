@@ -2,19 +2,24 @@ class SuperherosController < ApplicationController
   before_action :set_superhero, only: [:show, :edit, :update, :destroy]
 #   Create the index action
 def index
-  @superheros = Superhero.geocoded
-  @markers = @superheros.map do |superhero|
-    {
-      lat: superhero.latitude,
-      lng: superhero.longitude
-    }
     if params[:query].present?
       sql_query = "city ILIKE :query OR name ILIKE :query"
-      @superheros = Superhero.where(sql_query, query: "%#{params[:query].downcase}%")
+      @superheros = Superhero.geocoded.where(sql_query, query: "%#{params[:query].downcase}%")
+      @markers = @superheros.map do |superhero|
+        {
+          lat: superhero.latitude,
+          lng: superhero.longitude
+        }
+      end
     else
-      @supeheros = Superhero.all
+      @superheros = Superhero.geocoded
+      @markers = @superheros.map do |superhero|
+        {
+          lat: superhero.latitude,
+          lng: superhero.longitude
+        }
+      end
     end
-  end
 end
 # 2.Create the show action
 def show
