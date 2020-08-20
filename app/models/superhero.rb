@@ -9,5 +9,6 @@ class Superhero < ApplicationRecord
   validates :city, presence: true
   validates :superpower, presence: true
   validates :hourly_price, presence: true
+  validates :description, presence: true
 
 end
