@@ -30,9 +30,7 @@ puts "Create superheros"
     if (superheros_data["image"]["url"] == '')
       file = URI.open(superheros_data["image"]["url"])
 
-      # superhero.img_url.attach(io: file, filename: "#{superheros_data['name']}.jpg", content_type: 'image/jpg')
-    # else
-    #   url("")
+      superhero.img_url.attach(io: file, filename: "#{superheros_data['name']}.jpg", content_type: 'image/jpg')
     end
     superhero.save
 
