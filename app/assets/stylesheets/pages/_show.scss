@@ -51,6 +51,9 @@
   border-radius: 5px;
   padding: 10px;
   box-shadow: 5px 5px 10px $superhero-gray;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 .booking-details {
