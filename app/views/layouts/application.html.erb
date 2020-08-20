@@ -14,18 +14,21 @@
   </head>
 
   <body>
-    
+
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <div class="default-container">
       <%= yield %>
-      
+
     </div>
-    
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default">
       </script>
-    <div class="footer mt-3">
+    <div class="footer mt-3 d-flex justify-content-between mx-4">
       <p class="footer-text">Made with ♥️ at LeWagon Mexico</p>
+      <span><a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-facebook"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a></span>
     </div>
   </body>
 </html>

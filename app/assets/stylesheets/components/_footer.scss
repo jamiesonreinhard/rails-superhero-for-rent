@@ -4,11 +4,41 @@
   align-items: center;
   justify-content: center;
   background-color: $superhero-background-light;
-  
+
 }
 
 .footer-text {
   font-size: 12px;
   color: $superhero-blue-dark;
   margin: 0;
+}
+
+.fa-instagram {
+  color: black;
+  padding: 2px;
+}
+
+.fa-facebook {
+  color: black;
+  padding: 2px;
+}
+
+.fa-twitter {
+  color: black;
+  padding: 2px;
+}
+
+.fa-instagram:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.fa-twitter:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.fa-facebook:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
