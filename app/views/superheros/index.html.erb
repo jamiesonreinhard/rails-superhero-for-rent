@@ -23,7 +23,7 @@
   <div class="superhero-grid">
 <% @superheros.each do |superhero| %>
 <div class="index-card">
-  <%= image_tag "batman.png", class: "index-card-image" %>
+  <%= cl_image_tag superhero.img_url.key, class: "index-card-image" %>
   <div class="superhero-details">
     <div class="superhero-attributes">
       <h2 class="superhero-name"> <%= superhero.name %> </h2> 
