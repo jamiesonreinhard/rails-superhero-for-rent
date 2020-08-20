@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-lg-7 border-right">
     <div class="superhero-details-card">
-      <%= cl_image_tag @superhero.img_url.key, class: "super-hero-picture mr-4" %>
+      <%= cl_image_tag @superhero.img_url.key, crop: :thumb, gravity: :face, class: "super-hero-picture mr-4" %>
       <div class="superhero-info">
         <h1 class="super-text"><%= @superhero.name %></h1>
         <div class="flexbox d-flex mb-3">
