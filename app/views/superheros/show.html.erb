@@ -5,9 +5,13 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-7 border-right">
-    <div class="superhero-details-card">
+  <div class="col-lg-7">
+    <div class="superhero-details-card mb-3 pb-3">
+    <% if @superhero.img_url.attached? %>
       <%= cl_image_tag @superhero.img_url.key, crop: :thumb, gravity: :face, class: "super-hero-picture mr-4" %>
+      <% else %>
+      <%= image_tag "questionmark.jpg", crop: :thumb, gravity: :face, class: "super-hero-picture mr-4" %>
+      <% end %>
       <div class="superhero-info">
         <h1 class="super-text"><%= @superhero.name %></h1>
         <div class="flexbox d-flex mb-3">
@@ -16,6 +20,14 @@
 
         </div>
         <h4 class="">Superpower: <%= @superhero.superpower %></h2>
+      </div>
+    </div>
+    <div class="reviews-show">
+      <div class="reviews-header">
+        <h1 class="mr-3">Reviews</h1>
+        <%= link_to "Create review for #{@superhero.name}", new_superhero_review_path(@superhero), class: "btn dark-blue-btn btn-sm" %>
+      </div>
+      <div class="reviews-display">
       </div>
     </div>
   </div>
