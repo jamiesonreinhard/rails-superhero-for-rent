@@ -19,7 +19,7 @@
 
 <div class="row">
 <div class="col-lg-8 border-right">
-  <div class="superhero-grid">
+  <div class="superhero-grid mb-5">
 <% @superheros.each do |superhero| %>
 <div class="index-card">
   <div>
@@ -47,7 +47,7 @@
 <% end %>
 </div>
 </div>
-<div class="col-lg-4">
+<div class="col-lg-4" style="position: sticky">
   <div id="map" data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>" class="ml-2"></div>
 </div>
