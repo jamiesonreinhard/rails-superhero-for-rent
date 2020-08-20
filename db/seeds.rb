@@ -10,6 +10,8 @@ Superhero.destroy_all
 cities = ['New York City', 'Paris', 'Chicago', 'Mexico City', 'Denver', 'Montreal', 'Berlin', 'Moscow',
           'London', 'Los Angeles', 'Toronto', 'Portland', 'Milan', 'Barcelona', 'Sydney']
 
+description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi obcaecati quaerat illo unde excepturi nihil corrupti atque ipsum quasi voluptatum earum fugiat aliquid officia nihil corrupti atque ipsum quasi voluptatum earum fugiat aliquid officia, perspiciatis et, vitae soluta odit eum."
+
 valeria = User.create!(first_name: "Valeria", last_name: 'Ramey', email: "valeriaramey@gmail.com", password: "123456")
 iben = User.create!(first_name: "Iben", last_name: 'Lewagon', email: "iben@gmail.com", password: "123456")
 john = User.create!(first_name: "John", last_name: 'Smith', email: "johnsmith@gmail.com", password: "123456")
@@ -23,6 +25,7 @@ puts "Create superheros"
   superheros_data = JSON.parse(open(url).read)
   superhero = Superhero.new(name: superheros_data['name'],
     city: cities.sample,
+    description: description,
     superpower: Faker::Superhero.power, hourly_price: rand(500...2000), user: User.all.sample)
     if (superheros_data["image"]["url"] != '')
       begin
