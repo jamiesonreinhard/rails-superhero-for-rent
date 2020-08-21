@@ -1,0 +1,48 @@
+
+
+.booked-superhero {
+  width: 300px;
+  height: 450px;
+
+}
+
+.super-hero-booking-picture {
+  width: 200px;
+  height: 250px;
+}
+
+
+.booked-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-row-gap: 0px;
+  padding: 0 2rem 0 0;
+}
+
+.booking-details {
+  display: flex;
+
+}
+
+.change-btn {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: $superhero-blue-dark;
+
+}
+.change-btn:hover {
+  color: gray;
+  text-decoration: none;
+
+}
+
+.booked-header h3 {
+  font-family: 'Lato', 'sans-serif';
+}
+
+.booking-info {
+  font-family: 'Lato', 'sans-serif';
+
+}
+
