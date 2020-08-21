@@ -1,13 +1,14 @@
 <h1 class="super-text mb-5">My Superguard Listings</h1>
 <div class="mb-5">
-  <div class="grid booked-grid mb-5">
+  <div class="grid listings-grid mb-5">
           <% @superheros.each do |superhero| %>
            <div class="index-card">
   <div>
     <div class="index-card-image-box">
     <%# add a conditional to check if image exists below, else display placeholder %>
     <% if superhero.img_url.attached? %>
-      <%= cl_image_tag superhero.img_url.key, class: "index-card-image", crop: :thumb, gravity: :face %>
+      <div class="index-card-image" style="background-image: url('<%= cl_image_path(superhero.img_url.key) %>')">
+      </div>
       <% else %>
       <%= image_tag "questionmark.jpg", class: "index-card-image", crop: :thumb, gravity: :face %>
       <% end %>
