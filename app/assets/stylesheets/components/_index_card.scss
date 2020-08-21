@@ -6,6 +6,10 @@
   border-radius: 5px;
   box-shadow: 5px 5px 10px $superhero-gray;
   min-width: 240px;
+  transition: 0.3s all;
+  &:hover {
+    transform: scale(1.04);
+  }
 }
 
 .index-card-image-box {
@@ -58,7 +62,3 @@
   justify-content: left;
 }
 
-
-.index-card:hover {
-  transform: scale(1.05)
-}
