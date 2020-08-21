@@ -1,0 +1,21 @@
+.checkout-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.booking-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color:white;
+  background-color: $superhero-blue-dark;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px $superhero-gray;
+}
+
+.booking-details {
+  display: flex;
+  justify-content: space-between;
+}
