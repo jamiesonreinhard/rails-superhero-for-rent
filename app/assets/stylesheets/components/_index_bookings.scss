@@ -9,6 +9,7 @@
 .super-hero-booking-picture {
   width: 200px;
   height: 250px;
+  box-shadow: 5px 5px 20px $superhero-gray;
 }
 
 
@@ -25,15 +26,18 @@
 }
 
 .change-btn {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: $superhero-blue-dark;
-
+  padding: 5px 8px;
+  border-radius: 1px;
+  background-color: $superhero-black;
+  color: white;
+  transition: all 0.2s;
+  z-index: 100;
+  
 }
 .change-btn:hover {
-  color: gray;
+  color: white;
   text-decoration: none;
-
+  transform: translateY(-2px);
 }
 
 .booked-header h3 {
@@ -44,4 +48,3 @@
   font-family: 'Lato', 'sans-serif';
 
 }
-

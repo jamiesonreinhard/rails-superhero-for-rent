@@ -55,7 +55,7 @@ end
 
 def destroy
   @superhero.destroy
-  redirect_to superheros_path
+  redirect_to me_path
 end
 
 private

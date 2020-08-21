@@ -7,7 +7,7 @@
         <%= f.input :city, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.input :description, class: "form-control" %>
+        <%= f.input :description, class: "form-control", as: :text, :input_html => { class: 'test', :cols => 5, :rows => 6 } %>
       </div>
       <div class="field">
         <%= f.input :superpower, class: "form-control" %>
@@ -19,7 +19,7 @@
         <%= f.input :img_url, as: :file, class: "form-control"%>
       </div>
       <div class="field">
-        <%= f.button :submit, class: "btn btn-info" %>
+        <%= f.button :submit, class: "btn btn-block dark-blue-btn" %>
       </div>
     </div>
 <% end %>

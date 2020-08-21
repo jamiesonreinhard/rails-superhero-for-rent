@@ -12,11 +12,22 @@
 }
 
 .nav-link {
-  color: $superhero-background-light !important;
+  color: white !important;
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-1px);
+    color: $superhero-red-dark;
+  }
 }
 
 .fa-user-circle {
   color: white;
-
 }
 
+.dropdown {
+  margin-top: 8px;
+}
+
+.navbar-brand {
+  font-size: 22px;
+}
