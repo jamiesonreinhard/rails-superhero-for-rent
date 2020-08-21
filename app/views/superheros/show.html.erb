@@ -29,7 +29,11 @@
         <% else %>
         <% @superhero.reviews.each do |review| %>
           <div class="review-card mb-3">
-            <h4 mb-2><%= review.rating %>/5 Stars</h4>
+            <div class="mb-1">
+              <% review.rating.times do %>
+            <span>⭐️</span>
+            <% end %>
+            </div>
             <p><%= review.description %></p>
           </div>
         <% end %>
