@@ -11,7 +11,7 @@
       <div class="superhero-info">
         <h1 class="super-text"><%= @superhero.name %></h1>
         <div class="flexbox d-flex mb-3">
-          <div><i class="far fa-star"> <%= @cocktail.reviews.length > 0 ? (@cocktail.reviews.average(:rating)).round(2) : 5.00 %></i></div>
+          <div><i class="far fa-star"> <%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : 5.00 %></i></div>
           <div class="hero-city ml-3"><span><%= @superhero.city %></span></div>
         </div>
         <h4 class="">Superpower: <%= @superhero.superpower %></h2>
@@ -40,7 +40,7 @@
       <div class="booking-card">
         <div class="booking-details mb-3">
           <span><strong>$<%= @superhero.hourly_price %></strong>/hour</span>
-          <i class="far fa-star"><%= @cocktail.reviews.length > 0 ? (@cocktail.reviews.average(:rating)).round(2) : 5.00 %></i>
+          <i class="far fa-star"><%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : 5.00 %></i>
         </div>
         <div class="booking-form">
           <%= render "shared/form_booking" %> 
