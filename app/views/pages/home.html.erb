@@ -1,9 +1,9 @@
 <div class="home">
-  <%= video_tag "superhero_bg.mov", autoplay: :autoplay, loop: :loop, muted: :muted, class: "bg-video" %>
+  <%= image_tag "flying.png", style: 'width:1300px', class: "bg-image" %>
 
 <div class="site-header">
   <h1 class="site-title">MYSUPER</h1>
-  <h3 class="site-subtitle mb-5">Stay safe out there... with a <span>SUPER</span> bodyguard</h3>
+  <h3 class="site-subtitle mb-5"><strong>Stay safe out there... with a <span>SUPER</span> bodyguard</strong></h3>
     <%# create a dropdown with list of cities available for above input %>
     <%# <input class="form-control mr-sm-2 home-search" type="search" placeholder="Enter Date" aria-label="Search"> %>
     <%# create a calendar where you can select one date for above input %
@@ -12,10 +12,10 @@
     <%= form_tag superheros_path, class: "form-inline", method: :get do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form-control mr-1",
+      class: "form-control search-input mr-1 radius-1px",
       placeholder: "City or Superhero Name"
     %>
-    <%= submit_tag "Search", class: "btn dark-blue-btn-outline mr-2"  %>
+    <%= submit_tag "Search", class: "btn home-search-btn mr-2"  %>
     <% end %>
    </div>
 

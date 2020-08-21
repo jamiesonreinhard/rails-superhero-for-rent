@@ -3,7 +3,13 @@
   left: 0;
   top: 0;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.5;
   z-index: -1;
-  filter: grayscale(1.0);
+  filter: grayscale(0);
+}
+
+
+.bg-image {
+  object-cover: fill;
+  opacity: 0.2;
 }

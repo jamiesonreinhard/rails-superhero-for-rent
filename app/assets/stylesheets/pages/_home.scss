@@ -24,10 +24,21 @@
 }
 
 .home-search {
-  border: 2px solid $superhero-blue-dark;
+  border: 2px solid $superhero-black;
   border-radius: 5px;
 }
 
 .home {
   height: 75vh;
 }
+
+.search-super {
+  width: 100px;
+}
+
+.search-input {
+  border-radius: 1px !important;
+  width: 400px !important;
+}
+
+
