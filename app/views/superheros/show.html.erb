@@ -18,24 +18,32 @@
         <p><%= @superhero.description %></p>
       </div>
     </div>
-    <div class="reviews-show">
-      <div class="reviews-header mb-5">
+    <div class="reviews-show mb-5">
+      <div class="reviews-header mb-3">
         <h1 class="mr-3">Reviews</h1>
         <%= link_to "Create review", new_superhero_review_path(@superhero), class: "btn dark-blue-btn-outline btn-lg" %>
       </div>
       <div class="reviews-display mb-3">
+        <%  if @superhero.reviews.blank? %> 
+        <%= @superhero.name %> has no reviews!
+        <% else %>
         <% @superhero.reviews.each do |review| %>
           <div class="review-card mb-3">
-            <h4 mb-2><%= review.rating %>/5 Stars</h4>
+            <div class="mb-1">
+              <% review.rating.times do %>
+            <span>⭐️</span>
+            <% end %>
+            </div>
             <p><%= review.description %></p>
           </div>
+        <% end %>
         <% end %>
       </div>
     </div>
   </div>
 
   <div class="col-lg-5">
-    <div class="checkout-column">
+    <div class="checkout-column mb-5">
 
       <div class="booking-card">
         <div class="booking-details mb-3">
