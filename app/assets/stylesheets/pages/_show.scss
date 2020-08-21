@@ -3,6 +3,12 @@
   justify-content: space-between;
 }
 
+.show-superhero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .superhero-booking-name {
   font-family: $superhero-title-font;
   font-size: 3rem;
@@ -16,7 +22,7 @@
 
 .super-hero-picture {
   box-shadow: 5px 5px 10px $superhero-gray;
-  border-radius: 5px;
+  border-radius: 1px;
   margin-right: 10px;
   width: 300px;
   height: 350px;
@@ -50,10 +56,11 @@
   flex-direction: column;
   justify-content: space-between;
   color:white;
-  background-color: $superhero-blue-dark;
-  border-radius: 5px;
+  background-color: $superhero-black;
+  border-radius: 1px;
   padding: 10px;
   box-shadow: 5px 5px 10px $superhero-gray;
+  min-width: 400px;
 }
 
 .booking-details {
