@@ -36,13 +36,13 @@
     </div>
   <div class="superhero-details">
     <div class="superhero-attributes">
-      <h2 class="superhero-name"> <%= superhero.name %> </h2> 
+      <h2 class="superhero-name"> <%= superhero.name %> </h2>
       <h4 class="superhero-powers"><em><strong>Power: </strong> <%= superhero.superpower %></em></h4>
       <h4 class="superhero-powers"><em><strong>City: </strong> <%= superhero.city %></em></h4>
     </div>
   </div>
   </div>
-  <%= link_to "Book #{superhero.name}", superhero_path(superhero), class: "btn dark-blue-btn-card btn-block"%>
+  <%= link_to "Book #{superhero.name}", superhero_path(superhero), class: "btn book-card-button dark-blue-btn-card btn-block"%>
 </div>
 <% end %>
 </div>

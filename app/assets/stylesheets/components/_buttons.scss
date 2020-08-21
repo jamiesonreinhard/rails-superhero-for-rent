@@ -36,3 +36,29 @@
     color: $superhero-background-light;
   }
 }
+
+
+.home-search-btn {
+  background-color: $superhero-black;
+  color: $superhero-background-light;
+  border: 1px solid $superhero-black;
+  border-radius: 1px;
+  &:hover {
+    background-color: white;
+    color: $superhero-black;
+    border: gray;
+  }
+}
+
+.book-card-button {
+  border-radius: 1px;
+}
+
+
+
+
+
+
+
+
+
