@@ -4,12 +4,15 @@
   </h1>
 </div>
 
-<div class="row">
-  <div class="col-lg-7">
+<div class="show-superhero">
+  <div class="super-and-reviews">
     <div class="superhero-details-card mb-5">
+    <% if @superhero.img_url.attached? %>
       <%= cl_image_tag @superhero.img_url.key, crop: :thumb, gravity: :face, class: "super-hero-picture mr-4" %>
+      <% else %>
+      <%= image_tag "questionmark.jpg", class: "super-hero-picture mr-4" %>
+      <% end %>
       <div class="superhero-info">
-        <h1 class="super-text"><%= @superhero.name %></h1>
         <div class="flexbox d-flex mb-3">
           <div><i class="far fa-star"> <%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : 5.00 %></i></div>
           <div class="hero-city ml-3"><span><%= @superhero.city %></span></div>
@@ -21,7 +24,7 @@
     <div class="reviews-show mb-5">
       <div class="reviews-header mb-3">
         <h1 class="mr-3">Reviews</h1>
-        <%= link_to "Create review", new_superhero_review_path(@superhero), class: "btn dark-blue-btn-outline btn-lg" %>
+        <%= link_to "New Review", new_superhero_review_path(@superhero), class: "btn dark-blue-btn-outline" %>
       </div>
       <div class="reviews-display mb-3">
         <%  if @superhero.reviews.blank? %> 
@@ -31,7 +34,7 @@
           <div class="review-card mb-3">
             <div class="mb-1">
               <% review.rating.times do %>
-            <span>⭐️</span>
+            <span>⚡︎</span>
             <% end %>
             </div>
             <p><%= review.description %></p>
@@ -41,23 +44,21 @@
       </div>
     </div>
   </div>
-
-  <div class="col-lg-5">
-    <div class="checkout-column mb-5">
-
-      <div class="booking-card">
-        <div class="booking-details mb-3">
-          <span><strong>$<%= @superhero.hourly_price %></strong>/hour</span>
-          <i class="far fa-star"><%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : 5.00 %></i>
-        </div>
-        <div class="booking-form">
-          <%= render "shared/form_booking" %> 
-        </div>
+  
+  <div class="checkout-column mb-5">
+    <div class="booking-card">
+      <div class="booking-details mb-3">
+        <span><strong>$<%= @superhero.hourly_price %></strong>/hour</span>
+        <i class="far fa-star"><%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : 5.00 %></i>
       </div>
-        </div>
+      <div class="booking-form">
+        <%= render "shared/form_booking" %> 
+      </div>
+    </div>
       </div>
     </div>
   </div>
+  
 
 </div>
 
