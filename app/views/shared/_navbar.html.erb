@@ -19,7 +19,7 @@
           <%= link_to "My Bookings", superhero_bookings_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "My Listings", users_path(current_user), class: "nav-link" %>
+          <%= link_to "My Listings", me_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "user.png", class: "avatar dropdown-toggle ml-3", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
