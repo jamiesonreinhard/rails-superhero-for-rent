@@ -46,7 +46,7 @@
   </div>
   
   <div class="checkout-column mb-5">
-    <div class="booking-card">
+    <div class="booking-card ml-5">
       <div class="booking-details mb-3">
         <span><strong>$<%= @superhero.hourly_price %></strong>/hour</span>
         <i class="far fa-star"><%= @superhero.reviews.length > 0 ? (@superhero.reviews.average(:rating)).round(2) : 5.00 %></i>

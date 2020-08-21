@@ -21,18 +21,18 @@
 }
 
 .dark-blue-btn {
-  background-color: $superhero-blue-dark;
-  color: $superhero-background-light;
+  background-color: $superhero-black;
+  color: white;
   border-radius: 1px;
 }
 
 .dark-blue-btn-outline {
-  border: 1px solid $superhero-blue-dark;
-  color: $superhero-blue-dark;
+  border: 1px solid $superhero-black;
+  color: $superhero-black;
   border-radius: 1px;
   font-family: $superhero-body-font;
   &:hover {
-    background-color: $superhero-blue-dark;
-    color: $superhero-background-light;
+    background-color: $superhero-black;
+    color: white;
   }
 }
