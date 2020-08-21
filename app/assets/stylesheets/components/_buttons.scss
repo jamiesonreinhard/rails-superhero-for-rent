@@ -1,13 +1,13 @@
 .dark-rd-btn {
   background-color: $superhero-red-dark;
   color: $superhero-background-light;
-  border-radius: 5px;
+  border-radius: 1px;
 }
 
 .dark-rd-btn-outline {
   border: 2px solid $superhero-red-dark;
   color: $superhero-blue-dark;
-  border-radius: 5px;
+  border-radius: 1px;
   &:hover {
     background-color: $superhero-blue-dark;
     color: $superhero-background-light;
@@ -17,22 +17,22 @@
 .dark-blue-btn-card {
   background-color: white;
   color: $superhero-black;
-  border-radius: 0 0 5px 5px;
+  border-radius: 1px;
 }
 
 .dark-blue-btn {
-  background-color: $superhero-blue-dark;
-  color: $superhero-background-light;
-  border-radius: 5px;
+  background-color: $superhero-black;
+  color: white;
+  border-radius: 1px;
 }
 
 .dark-blue-btn-outline {
-  border: 1px solid $superhero-blue-dark;
-  color: $superhero-blue-dark;
-  border-radius: 5px;
+  border: 1px solid $superhero-black;
+  color: $superhero-black;
+  border-radius: 1px;
   font-family: $superhero-body-font;
   &:hover {
-    background-color: $superhero-blue-dark;
-    color: $superhero-background-light;
+    background-color: $superhero-black;
+    color: white;
   }
 }

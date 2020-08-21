@@ -1,6 +1,6 @@
 <h1 class="super-text mb-5">My Superguard Listings</h1>
-
- <div class="grid booked-grid mb-3">
+<div class="mb-5">
+  <div class="grid booked-grid mb-3">
           <% @superheros.each do |superhero| %>
            <div class="index-card">
   <div>
@@ -33,3 +33,6 @@
         </div>
         <%= link_to "Home", root_path, class: "btn dark-blue-btn mr-1" %>
         <%= link_to "Create Superhero", new_superhero_path, class: "btn dark-blue-btn-outline mr-1" %>
+
+</div>
+ 
