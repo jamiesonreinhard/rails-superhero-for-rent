@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #8d99ae;
-  border-radius: 5px;
+  background-color: $superhero-black;
+  border-radius: 1px;
   box-shadow: 5px 5px 10px $superhero-gray;
   min-width: 240px;
   transition: 0.3s all;
@@ -20,11 +20,11 @@
   position: absolute;
   bottom: 8px;
   right: 8px;
-  background-color: $superhero-red-dark;
-  border: 1px solid $superhero-background-light;
+  background-color: white;
+  border: 1px solid $superhero-black;
   padding: 2px;
-  color: $superhero-background-light;
-  border-radius: 5px;
+  color: $superhero-black;
+  border-radius: 0px;
 }
 
 .superhero-price {
@@ -43,10 +43,12 @@
 .superhero-name {
   font-size: 20px;
   font-family: $superhero-title-font;
+  color: white;
 }
 
 .superhero-powers {
   font-size: 14px;
+  color: white;
 }
 
 .superhero-details {
@@ -54,6 +56,7 @@
   justify-content: space-between;
   padding: 10px;
   align-items: center;
+  color: white;
 }
 
 .superhero-attributes {
