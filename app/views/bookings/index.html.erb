@@ -1,6 +1,5 @@
 
-  <div class="booked-header"><h3> My Bookings</h3></div>
-   <hr color='black'>
+<h1 class="super-text"> My Bookings</h1>
     <div class="row">
        <div class="col">
         <div class="grid booked-grid mb-5">
@@ -17,17 +16,12 @@
              </div>
              <%= cl_image_tag booking.superhero.img_url.key, crop: :thumb, gravity: :face, class: "super-hero-booking-picture mr-4" %>
              <div class="edit-delete-cancel-btn mt-3">
-              <%= link_to 'Edit', edit_superhero_booking_path(booking.superhero, booking), class: "change-btn dark-rd-btn"%>
-              <%= link_to "Delete",
-               superhero_booking_path(booking.superhero, booking),
-               method: :delete,
-               data: { confirm: 'Are you sure you want to delete?'},
-               class: "change-btn dark-rd-btn" %>
+              <%= link_to 'Edit', edit_superhero_booking_path(booking.superhero, booking), class: "change-btn"%>
               <%= link_to "Cancel",
                superhero_booking_path(booking.superhero, booking),
                method: :delete,
                data: { confirm: 'Are you sure you want to cancel?'},
-               class: "change-btn dark-rd-btn" %>
+               class: "change-btn" %>
              </div>
            </div>
 
