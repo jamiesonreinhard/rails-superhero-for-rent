@@ -1,0 +1,10 @@
+.badge-pill {
+  background-color: #202020;
+  border-radius: 5px;
+  padding: 5px 2px;
+  margin: 2px;
+  color: white;
+  &:hover {
+    color: $superhero-red-dark;
+  }
+}

@@ -23,8 +23,11 @@
     </div>
   </div>
   </div>
-  <%= link_to "Edit Superhero", edit_superhero_path(superhero) %>
-  <%= link_to "Unlist Superhero", "#" %>
+  <%= link_to "Edit Superhero", edit_superhero_path(superhero), class: "badge badge-pill" %>
+  <%= link_to "Unlist Superhero", superhero_path(superhero),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }, class: "badge badge-pill" %>
+  <%= link_to "View Superhero Profile", superhero_path(superhero), class: "badge badge-pill" %>
 </div>
          <%end%>
         </div>
