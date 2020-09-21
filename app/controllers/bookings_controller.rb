@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user: current_user)
+    @favorites = current_user.favorites
   end
   # 2.Create the show action
 

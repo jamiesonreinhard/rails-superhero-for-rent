@@ -19,6 +19,10 @@
         </div>
         <h4 class="">Superpower: <%= @superhero.superpower %></h2>
         <p><%= @superhero.description %></p>
+        <div>
+        <%= link_to "Add to Favorites", superhero_favorite_path(@superhero), method: :post, class: "btn dark-blue-btn" %>
+        <%= link_to "Remove from Favorites", superhero_favorite_path(@superhero), method: :delete, class: "btn dark-blue-btn-outline" %>
+        </div>
       </div>
     </div>
     <div class="reviews-show mb-5">

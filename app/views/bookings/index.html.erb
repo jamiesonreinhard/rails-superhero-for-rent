@@ -1,5 +1,11 @@
+<ul class="nav nav-tabs mb-3">
+  <li class="active"><a data-toggle="tab" href="#bookings" class="btn dark-blue-btn">My Bookings</a></li>
+  <li><a data-toggle="tab" href="#favorites" class="btn dark-blue-btn-outline">My Favorites</a></li>
+</ul>
 
-<h1 class="super-text"> My Bookings</h1>
+<div class="tab-content">
+  <div id="bookings" class="tab-pane fade in active">
+    <h1 class="super-text"> My Bookings</h1>
     <div class="row">
        <div class="col">
         <div class="grid booked-grid mb-5">
@@ -29,5 +35,40 @@
         </div>
        </div>
     </div>
+  </div>
+  <div id="favorites" class="tab-pane fade">
+  <h1 class="super-text"> My Favorites</h1>
+    <div class="superhero-grid mb-5">
+<% @favorites.each do |favorite| %>
+<div class="index-card">
+  <div>
+    <div class="index-card-image-box">
+    <%# add a conditional to check if image exists below, else display placeholder %>
+    <% if favorite.superhero.img_url.attached? %>
+      <%= cl_image_tag favorite.superhero.img_url.key, class: "index-card-image" %>
+      <% else %>
+      <%= image_tag "questionmark.jpg", class: "index-card-image" %>
+      <% end %>
+      <div class="price-chip">
+        <h3 class="superhero-price">$<%= favorite.superhero.hourly_price %>/hr</h3>
+      </div>
+    </div>
+  <div class="superhero-details">
+    <div class="superhero-attributes">
+      <h2 class="superhero-name"> <%= favorite.superhero.name %> </h2>
+      <h4 class="superhero-powers"><em><strong>Power: </strong> <%= favorite.superhero.superpower %></em></h4>
+      <h4 class="superhero-powers"><em><strong>City: </strong> <%= favorite.superhero.city %></em></h4>
+    </div>
+  </div>
+  </div>
+  <%= link_to "Book #{favorite.superhero.name}", superhero_path(favorite.superhero), class: "btn book-card-button dark-blue-btn-card btn-block"%>
+</div>
+<% end %>
+</div>
+  </div>
+</div>
+
+
+
 
 

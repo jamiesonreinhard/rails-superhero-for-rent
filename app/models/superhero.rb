@@ -3,6 +3,7 @@ class Superhero < ApplicationRecord
   has_one_attached :img_url
 
   has_many :bookings
+  has_many :favorites
 
   has_many :reviews, dependent: :destroy
 
